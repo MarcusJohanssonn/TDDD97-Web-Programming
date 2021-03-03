@@ -1,0 +1,104 @@
+<html>
+<head>
+  <title> Twidder </title>
+  <link href="client.css" type="text/css" rel="stylesheet">
+  <script type="text/view" id="welcomeView">
+  <div class="wrapper">
+    <div id=contentBox>
+      <div class="img">
+        <img src = "wimage.png">
+      </div>
+      <div class="rightbox">
+        <div id = login>
+          <form class = "formRow" onsubmit="javascript:validateLogin();" >
+            <div class = "inputRow"><label for="uname">Username</label> <input class="smallInput" type="text" id="uname"required><br></div>
+            <div class = "inputRow"><label for="password">Password</label> <input class="smallInput" type="password" id="loginpw" required><br></div>
+            <div class = "inputRow"><input class="smallInput" type="submit" value="Login"></div>
+          </form>
+        </div>
+        <div id = signup>
+          <h2>Sign up here</h2>
+          <form class = "formRow" onsubmit="javascript:validateSignUp();">
+            <div class = "inputRow"><label for="email">Email</label> <input class="smallInput" type="email" id="email" required><br></div>
+            <div class = "inputRow"><label for="password">Password</label> <input class="smallInput" type="password" id="password" required><br></div>
+            <div class="popup">
+              <span class="popuptext" id="myPopup">Passwords didnt match, try again!</span>
+              <span class="popuptext" id="myPopup2">Password needs to be a minimum of 4 characters</span>
+            </div>
+
+            <div class = "inputRow"><label for="password">  Repeat PSW</label> <input class="smallInput" type="password" id="rptpassword" required><br></div>
+            <div class = "inputRow"><label for="fname">First name</label> <input class="smallInput"  type="text" id="fname" required><br></div>
+            <div class = "inputRow"><label for="lname">Family name</label> <input class="smallInput"  type="text" id="lname" required><br></div>
+            <div class = "inputRow"><label for="gender">Gender</label> <select class="smallInput"  id="gender" id="gender" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+              </select>
+            <br></div>
+            <div class = "inputRow"><label for="city">City</label> <input class="smallInput"  type="text" id="city" required><br></div>
+            <div class = "inputRow"><label for="country">Country</label> <input class="smallInput"  type="text" id="country" required><br></div>
+            <div class = "inputRow"><input class="smallInput"  type="submit" value="Sign up"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </script>
+  <script type="text/view" id="profileView">
+    <div class = "wrapper">
+      <div class = "menu">
+        <ul class = "tabs">
+          <li id="tabs1" onclick="changeTab('tabs-1')"> Home </li>
+          <li id="tabs2" onclick="changeTab('tabs-2')"> Browser </li>
+          <li id="tabs3" onclick="changeTab('tabs-3')"> Account </li>
+        </ul>
+      </div>
+
+      <div id="tabs-1" class="tabContentHomePage">
+        <div id="homeContent">
+            <div id="postWall">
+              <form class = "formRow" onsubmit="javascript:postWall();return false;" >
+                  <div id = "inputPost"><input class="bigInput" type="text" id="wallText" placeholder="Whats cookin?" required><br></div>
+                  <div id = "submitPost"><input class="bigSumbit" type="submit" value="Post"></div>
+              </form>
+            </div>
+            <div id="wallOfContent">
+            </div>
+        </div>
+        <div id = "rightContainer">
+          <div id="userInfo"></div>
+          <div id="refresher"><Button type="button" onclick = "javascript:refreshPosts();" >Refresh posts</Button></div>
+        </div>
+      </div>
+      <div id="tabs-2" class="tabContent">
+      <div id="searchWall">
+        <form class = "formRow" onsubmit="javascript:findUser();return false;" >
+            <div id = "inputPost"><input class="bigInput" type="email" id="searchText" placeholder="Search user" required><br></div>
+            <div id = "submitPost"><input class="bigSumbit" type="submit" value="Find"></div>
+        </form>
+      </div>
+      </div>
+      <div id="tabs-3" class="tabContent">
+      <div id = "changePassword">
+        <h2> Change Password </h2>
+        <form class = "formRow" onsubmit="javascript:passwordChange();return false;" >
+          <div class = "inputRow"><label for="uname">Current Password</label> <input class="smallInput"  type="password" id="currPW" required><br></div>
+          <div class = "inputRow"><label for="password">New Password</label> <input class="smallInput"  type="password" id="newPW" required><br></div>
+          <div class = "inputRow"><label for="password">Repeat Password</label> <input class="smallInput"  type="password" id="rptnewPW" required><br></div>
+          <div class = "inputRow"><input class="smallInput"  type="submit" value="Change Password"></div>
+        </form>
+      </div>
+      <div id="signOut">
+        <Button type="button" onclick = "javascript:validateLogout();" >Sign out</Button>
+      </div>
+      </div>
+    </div>
+  </script>
+</head>
+<body>
+  <div id = "content"> </div>
+  <div id = "feedbackArea"></div>
+  <script src="client.js" type="text/javascript"></script>
+  <script src="serverstub.js" type="text/javascript"></script>
+</body>
+</html>

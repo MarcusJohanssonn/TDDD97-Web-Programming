@@ -1,0 +1,43 @@
+<head>
+  <title> Twidder </title>
+  <link href="welcome.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="wrapper">
+  <div id=contentBox>
+    <div class="img">
+      <img src = "wimage.png">
+    </div>
+    <div class="rightbox">
+      <div id = login>
+        <form class = "form-row" action="/action_page.php">
+          <div class = "inputRow"><label for="uname">Username</label> <input type="text" name="uname"><br></div>
+          <div class = "inputRow"><label for="password">Password</label> <input type="password" name="password"><br></div>
+          <div class = "inputRow"><input type="submit" value="Submit"></div>
+        </form>
+      </div>
+      <div id = signup>
+        <h2>Sign up here</h2>
+        <form class = "form-row" action="/action_page.php">
+          <div class = "inputRow"><label for="email">Email</label> <input type="text" name="email"><br></div>
+          <div class = "inputRow"><label for="password">Password</label> <input type="password" name="password"><br></div>
+          <div class = "inputRow"><label for="password">  Repeat PSW</label> <input type="password" name="password"><br></div>
+          <div class = "inputRow"><label for="fname">First name</label> <input type="text" name="fname"><br></div>
+          <div class = "inputRow"><label for="lname">Family name</label> <input type="text" name="lname"><br></div>
+          <div class = "inputRow"><label for="gender">Gender</label> <select id="gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            </select>
+          <br></div>
+          <div class = "inputRow"><label for="city">City</label> <input type="text" name="city"><br></div>
+          <div class = "inputRow"><label for="country">Country</label> <input type="text" name="country"><br></div>
+          <div class = "inputRow"><input type="submit" value="Submit"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

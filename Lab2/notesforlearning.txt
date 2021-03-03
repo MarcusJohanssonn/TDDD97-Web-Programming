@@ -1,0 +1,32 @@
+WINDOWS
+
+set FLASK_DEBUG=1 
+Detta gör att vi kan uppdatera genom webbläsaren utan att starta om flask appen
+
+set FLASK_APP=app.py(namnet på flaskappen).
+bestämmer vilken fil vi ska köra flask på.  
+
+ourenv\Scripts\activate
+starta envoironment
+
+deactive (om man är inne i env)
+
+pip install (namn på lib)
+installerar bibliotek
+kräver import i själva python koden för att använda, import x as y betyder att vi kan använda y.function som syntax.
+
+pip list (lista över installerade libs i den nuvarande env).
+
+Om man ska dela projektet eller inte förstår varför det inte fungerar på sin andra dator:
+pip freeze > requirements.txt
+
+python -m flask run
+
+sqlite3 database.db < schema.sql
+kopplar din schema till database
+
+MAC
+source myenv/Scripts/activate
+python3 -m flask run
+export FLASK_APP=server.py
+export FLASK_DEBUG=1 
